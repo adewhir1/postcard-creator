@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Postcard Creator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <p> </p>
+
+    <div id="wrapper" ondragover="allowDrop(event)" ondrop="drop(event)">
+
+        <div id="buttonWrapper">
+
+            <input type="file" id="fileUploadButton" onchange="upload()" accept="image/*" />
+            <label for="fileUploadButton"> 
+          <div id="upload" class="Button">  
+            Upload image
+          </div> 
+        </label>
+
+            <div id="dragAndDrop" class="Button" onclick="writeDropInstructions()">
+                Drag and drop
+            </div>
+
+            <div id="webcam" class="Button" onclick="showWebcam()">
+                Use webcam
+            </div>
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Glass_button_red.svg/2000px-Glass_button_red.svg.png" id="takePicButton" onclick="takeWebcamPhoto()">
+
+
+        </div>
+        <!-- End of buttonWrapper -->
+
+        <canvas id="postcard" height="410" width="580"> 
+   </canvas>
+
+        <video autoplay></video>
+        <br>
+
+    </div>
+
+    <div id="formContainer">
+
+        <button id="resetLink" onclick="resetCanvas()">Reset</button>
+
+        <form action="/emailSender.php" method="post">
+
+            Now add some text to your postcard!
+            <br> Hit send when you're done.
+            <br><br> Title: <input type="text" id="title" onkeyup="writeMessage()">
+            <br> Message (optional): <input type="text" id="message" onkeyup="writeMessage()">
+            <br>
+            <input name="canvasAsPNG" id="canvasAsPNG" maxlength="999999999999" type="hidden"> Recipient's email address: <input type="text" name="emailAddress" id="emailAddress"> &nbsp;
+            <input type="submit" value="Send">
+
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="postcardDesigner.js"></script>
+</body>
+
+</html>

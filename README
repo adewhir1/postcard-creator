@@ -1,0 +1,40 @@
+-POSTCARD CREATOR-
+
+This application takes image input from the user, modifies
+the image, and sends it as an email to a specified recipient.
+
+-GETTING STARTED-
+
+As of 3/2/18, this application supports the latest versions of 
+Chrome, Firefox, Safari, and Explorer. It has not been tested on
+Opera.
+
+You do not need to download any libraries or software to use
+this application. You only need one of the browsers listed above.
+
+You can try the app yourself at adewhir1.000webhostapp.com.
+
+-FEATURES-
+
+-Dynamic line wrapping if message is too long
+-Resizes image to standard postcard size without distortion
+-Supports image upload and webcam capture
+-Sends email without relying on user's mail client
+-Simple UI and step by step onscreen instructions
+
+-KNOWN ISSUES-
+
+-Drag and drop feature is still in development. As of 3/2/18
+ drag and drop is experimental only and not supported.
+-Some email services (like gmail) cache image attachments. 
+ Therefore, the first postcard the recipient gets will be accurate, 
+ but gmail replaces subsequent postcards with the cached image.
+
+-ACKNOWLEDGEMENTS-
+
+-Lines 84 and 85 were copied from Stack Overflow.
+
+As someone with limited experience in web development, and who
+had never used a server-side language until this project, I am 
+excited to have had the opportunity to get my hands dirty and 
+learn in a practical way. Thank you! -Andrea 
