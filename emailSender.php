@@ -9,14 +9,16 @@
 	$card = str_replace('data:image/png;base64,', '', $card);
 	$card = str_replace(' ', '+', $card);
     $data = base64_decode($card);
+	unlink('postcard.png');
+        sleep(2);
 	$imgName = 'postcard.png';
 	file_put_contents($imgName, $data);
-	sleep(5);
+	sleep(2);
 	
 	$message = '
 	    <html>
 	     <body>
-	      <img src="https://adewhir1.000webhostapp.com/postcard.png?<?=rand(11111,99999)?>">
+	      <img src="https://adewhir1.000webhostapp.com/postcard.png?<?php echo filemtime($imgName)?>">
 	     </body>
 	    </html>
 	';

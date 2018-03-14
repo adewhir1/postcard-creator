@@ -20,12 +20,12 @@
           </div> 
         </label>
 
-            <div id="dragAndDrop" class="Button" onclick="writeDropInstructions()">
-                Drag and drop
-            </div>
-
             <div id="webcam" class="Button" onclick="showWebcam()">
                 Use webcam
+            </div>
+
+	    <div id="dragAndDrop" class="Button" onclick="writeDropInstructions()">
+                Drag and drop
             </div>
 
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Glass_button_red.svg/2000px-Glass_button_red.svg.png" id="takePicButton" onclick="takeWebcamPhoto()">
@@ -46,7 +46,7 @@
 
         <button id="resetLink" onclick="resetCanvas()">Reset</button>
 
-        <form action="/emailSender.php" method="post">
+        <form onsubmit="return validate()" action="/emailSender.php" method="post">
 
             Now add some text to your postcard!
             <br> Hit send when you're done.

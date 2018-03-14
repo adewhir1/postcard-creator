@@ -205,3 +205,15 @@ function writeMessage() {
 function resetCanvas() {
     window.location.reload(true);
 }
+
+function validate() {
+    if(document.getElementById("emailAddress").value === "") {
+        window.alert("Email address cannot be empty.");
+        return false;
+    }
+    if(document.getElementById("title").value === "") {
+        window.alert("Title cannot be empty.");
+        return false;
+    }
+    return true;
+}

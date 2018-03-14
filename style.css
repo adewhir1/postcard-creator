@@ -1,6 +1,3 @@
-/*Browsers that support drag and drop:
-https://www.w3schools.com/html/html5_draganddrop.asp
-*/
 
 #postcard {
   height: 410px;
@@ -45,7 +42,7 @@ https://www.w3schools.com/html/html5_draganddrop.asp
 }
 
 #dragAndDrop {
-  
+  visibility: hidden;  
 }
 
 #webcam {
@@ -64,7 +61,7 @@ video {
 }
 
 #takePicButton {
-  margin-top: 70px;
+  margin-top: 150px;
   width: 50px;
   height: 50px;
   cursor: pointer;
